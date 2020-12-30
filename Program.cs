@@ -25,7 +25,7 @@ namespace DNGuard
                         IList<Instruction> IL = method.Body.Instructions;
                         for (int i = 0; i < IL.Count; i++)
                         {
-                           if (IL[i].OpCode == OpCodes.Call && IL[i].Operand == null)
+                           if (IL[i].OpCode == OpCodes.Call && IL[i].Operand == null && IL[i + 3].OpCode == OpCodes.Br_S)
                             {
                                 Console.WriteLine($"Detected Anti-Tamper @ {method.Name} ({i})");
                                 IL[i].OpCode = OpCodes.Nop;

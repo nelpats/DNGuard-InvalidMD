@@ -1,2 +1,2 @@
-# DNGuard-AntiTamper
-The easiest way to remove DNGuard Anti-Tamper.
+# DNGuard-InvalidMD
+The easiest way to remove DNGuard Invalid-MD

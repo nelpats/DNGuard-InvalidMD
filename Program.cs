@@ -27,7 +27,7 @@ namespace DNGuard
                         {
                            if (IL[i].OpCode == OpCodes.Call && IL[i].Operand == null && IL[i + 3].OpCode == OpCodes.Br_S)
                             {
-                                Console.WriteLine($"Detected Anti-Tamper @ {method.Name} ({i})");
+                                Console.WriteLine($"Detected InvalidMD @ {method.Name} ({i})");
                                 IL[i].OpCode = OpCodes.Nop;
                                 IL[i + 3].OpCode = OpCodes.Nop;
                             }
